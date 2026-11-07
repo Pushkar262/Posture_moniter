@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "method": "MediaPipe Tasks Pose Landmarker (lite, CPU) + scale-normalized geometry + temporal hysteresis",
+  "session_duration_seconds": 60.0,
+  "pose_frames": 1337,
+  "pose_observed_seconds": 45.15,
+  "tracking_coverage_percent": 75.2,
+  "good_posture_seconds": 10.47,
+  "non_upright_seconds": 32.66,
+  "unclassified_seconds": 2.02,
+  "good_posture_percent": 23.2,
+  "break_count": 2,
+  "breaks": [
+    {
+      "start_seconds": 28.15,
+      "end_seconds": 32.063,
+      "duration_seconds": 3.913
+    },
+    {
+      "start_seconds": 34.453,
+      "end_seconds": 60.03,
+      "duration_seconds": 25.577
+    }
+  ],
+  "posture_score": 23.2,
+  "thresholds": {
+    "min_visibility": 0.55,
+    "enter_lean_deg": 14.0,
+    "exit_lean_deg": 18.0,
+    "enter_neck_gap_ratio": 0.22,
+    "exit_neck_gap_ratio": 0.18,
+    "enter_head_offset_ratio": 0.18,
+    "exit_head_offset_ratio": 0.23,
+    "enter_shoulder_tilt_ratio": 0.12,
+    "exit_shoulder_tilt_ratio": 0.16,
+    "smoothing_window": 7,
+    "transition_seconds": 1.0,
+    "break_min_seconds": 2.0,
+    "max_observation_gap_seconds": 0.75
+  },
+  "interpretation": "posture_score equals the percentage of pose-observed time classified as settled upright posture; unclassified transition time remains in the denominator",
+  "limitations": [
+    "This is a heuristic posture estimate, not a medical or ergonomic diagnosis.",
+    "A frontal camera estimates lateral lean and head/shoulder alignment; forward-back slouch is better assessed from a side or three-quarter view.",
+    "Single-person tracking is assumed. Other people or severe occlusion can reduce tracking coverage."
+  ],
+  "source": "0",
+  "frames_read": 1713,
+  "read_errors": 0
+}
